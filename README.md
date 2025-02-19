@@ -81,7 +81,8 @@ OR click **Run ▶** in Android Studio.
 ## 📸 **Screenshots**
 | **Scan Screen** | **Cart** | **Orders** |
 |----------------|------------|------------------|
-| ![PaymentApp - Cart](https://github.com/user-attachments/assets/35ab6ffd-779b-47a1-a913-7046be4ec714) | ![Cart]![PaymentApp - Cart](https://github.com/user-attachments/assets/037ed546-2658-47f8-bf19-47095b3d6da5) | ![Cart]![PaymentApp - Cart](https://github.com/user-attachments/assets/df72a8b5-2c3e-4b14-ad63-7fbc723c2c91)
+|![PaymentApp-Scan](https://github.com/user-attachments/assets/368dd699-66e2-4792-bfab-e680c11e1247)| ![PaymentApp - Cart](https://github.com/user-attachments/assets/35ab6ffd-779b-47a1-a913-7046be4ec714) | ![PaymentApp - Orders](https://github.com/user-attachments/assets/ce0f189d-dad9-4987-9149-832d303736f1)
+|
 
 
 ---
