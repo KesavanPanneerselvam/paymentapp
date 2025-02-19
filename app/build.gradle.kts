@@ -78,6 +78,8 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     kapt(libs.hilt.androidx.compiler)
 
+    implementation(libs.gson)
+
     // Coroutines Testing
     testImplementation(libs.kotlinx.coroutines.test)
 

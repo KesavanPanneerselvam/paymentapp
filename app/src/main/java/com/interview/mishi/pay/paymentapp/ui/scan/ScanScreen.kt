@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
@@ -41,6 +42,7 @@ import com.interview.mishi.pay.paymentapp.ui.components.SnackBarLayout
 import com.interview.mishi.pay.paymentapp.ui.theme.PaymentAppTheme
 import com.interview.mishi.pay.paymentapp.ui.theme.getColors
 import com.interview.mishi.pay.paymentapp.utils.UIState
+import com.interview.mishi.pay.paymentapp.utils.showMessage
 import com.interview.mishi.pay.paymentapp.utils.value
 
 @Composable
@@ -48,7 +50,9 @@ fun ScanScreen(viewModel: ScanViewModel = hiltViewModel()) {
     val scannedProduct = remember { viewModel.scannedProduct }
 
     when (val result = viewModel.addCartItem.collectAsState().value) {
-        is UIState.Success -> {}
+        is UIState.Success -> {
+            showMessage(LocalContext.current, R.string.product_added_to_cart_successfully)
+        }
 
         is UIState.Loading -> {
             ProgressDialog()

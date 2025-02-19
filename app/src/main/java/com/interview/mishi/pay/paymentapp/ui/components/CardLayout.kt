@@ -1,5 +1,6 @@
 package com.interview.mishi.pay.paymentapp.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.interview.mishi.pay.paymentapp.ui.theme.getColors
 
 @Composable
-fun CardLayout(content: @Composable () -> Unit) {
+fun CardLayout(onClick: (()->Unit)? = null,content: @Composable () -> Unit) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = getColors().background,
@@ -25,6 +26,9 @@ fun CardLayout(content: @Composable () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
+            .clickable (enabled = onClick != null) {
+                onClick?.invoke()
+            }
     ) {
         Column(modifier = Modifier
             .padding(12.dp)
