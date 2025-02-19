@@ -24,7 +24,7 @@ PaymentApp is a modern **Android payment system** built using **Jetpack Compose,
 │   │── 📂 data               # Data Layer (Repositories, Firestore)
 │   │── 📂 domain             # Business Logic (Use Cases, Models)
 │   │── 📂 ui                 # UI Layer (Jetpack Compose Screens)
-│   │── 📂 scanner            # QR/Barcode Scanner with CameraX
+│   │── 📂 di                 # Hilt DI for AppModule & RepositoryModule
 │   │── 📂 utils              # Utility Classes (ResponseState, Extensions)
 │   │── 📜 MainActivity.kt    # Entry Point
 │── 📂 scanner                # QR/Barcode 
@@ -66,7 +66,7 @@ cd paymentapp
 2. Add an **Android App** and download the `google-services.json` file.
 3. Place the file inside:
    ```
-   app/src/main/
+   app/
    ```
 4. Enable **Firestore & Authentication** in Firebase.
 
@@ -79,29 +79,18 @@ OR click **Run ▶** in Android Studio.
 ---
 
 ## 📸 **Screenshots**
-| **Scan Screen** | **Cart** | **Orders** |
-|----------------|------------|------------------|
-|![PaymentApp-Scan](https://github.com/user-attachments/assets/368dd699-66e2-4792-bfab-e680c11e1247)| ![PaymentApp - Cart](https://github.com/user-attachments/assets/35ab6ffd-779b-47a1-a913-7046be4ec714) | ![PaymentApp - Orders](https://github.com/user-attachments/assets/ce0f189d-dad9-4987-9149-832d303736f1)
-|
+| **Scan Screen** | **Cart** | **Orders** | **Invoice Details** |
+|----------------|------------|------------------|------------------|
+|![PaymentApp-Scan](https://github.com/user-attachments/assets/368dd699-66e2-4792-bfab-e680c11e1247)| ![PaymentApp - Cart](https://github.com/user-attachments/assets/35ab6ffd-779b-47a1-a913-7046be4ec714) | ![PaymentApp - Orders](https://github.com/user-attachments/assets/ce0f189d-dad9-4987-9149-832d303736f1)| ![PaymentApp - InvoiceDetails](https://github.com/user-attachments/assets/46147d4b-d15b-47dc-adfe-fef8ffdf2ba4)|
 
+## 📡 **Scanner Library**
+The **scanner module** in this project is created as a **separate library** to make it **accessible by both Jetpack Compose and traditional View-based Android code**. This ensures **maximum compatibility** and allows seamless integration into different types of Android projects.
 
----
+✅ **Supports Jetpack Compose Screens**  
+✅ **Works with XML-based UI**  
+✅ **Uses CameraX & ML Kit for QR/Barcode Scanning**  
 
-## 🛠 **Testing**
-### **1️⃣ Run Unit Tests**
-```sh
-./gradlew test
-```
-
-### **2️⃣ Run UI Tests**
-```sh
-./gradlew connectedAndroidTest
-```
-
-### **3️⃣ Coverage Report**
-```sh
-./gradlew jacocoTestReport
-```
+To use the scanner library in your own project, you can simply include the module and call the provided scanning interface. 
 
 ---
 
@@ -122,7 +111,7 @@ See the full license [here](LICENSE).
 
 ## 📬 **Contact**
 📌 **Developer:** [Kesavan Panneerselvam](https://github.com/KesavanPanneerselvam)  
-📌 **Email:** kesavan.dev@example.com  
+📌 **Email:** kesavanpanneerselvam@gmail.com  
 📌 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/kesavan-panneerselvam/)  
 
 ---
